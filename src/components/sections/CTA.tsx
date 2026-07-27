@@ -116,16 +116,13 @@ export default function CTA() {
         canvasCtx.fillStyle = this.color;
         canvasCtx.globalAlpha = this.opacity;
         canvasCtx.fill();
-        
-        // Add glow
-        canvasCtx.shadowBlur = 15;
-        canvasCtx.shadowColor = this.color;
       }
     }
 
     const init = () => {
       particles = [];
-      for (let i = 0; i < 150; i++) {
+      // Reduced particle count from 150 to 80 for better performance
+      for (let i = 0; i < 80; i++) {
         particles.push(new Particle());
       }
     };
